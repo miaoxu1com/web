@@ -1,2 +1,8 @@
 https://www.cnblogs.com/jinjiangongzuoshi/
 https://blog.csdn.net/as604049322/article/details/121391639
+
+
+playwright  自动化流程   首先打开连接一定要是首页的  多级连接首先会失效  另外重复打开会报错
+然后就是 查找元素 点击
+frame  连接不行就现有select查找frame元素
+然后fm = frame.conten_frame()  切换到frame  切换后返回frame对象  然后操作frame  点击frame中的对象而不是页面的对象了
