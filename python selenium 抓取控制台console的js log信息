@@ -12,3 +12,7 @@ https://www.jianshu.com/p/98f562597de2
 所以多个窗口时打印 变化前后的当前窗口
 print(json.dumps(res, sort_keys=True, indent=4, separators=(',', ': ')))
 str(info[2])[50:-1].strip()
+
+https://www.itranslater.com/qa/details/2582476797841507328
+从chromedriver 75.0.3770.8开始，您必须使用goog：loggingPrefs而不是loggingPrefs：
+d['goog:loggingPrefs'] = { 'browser':'ALL' }
