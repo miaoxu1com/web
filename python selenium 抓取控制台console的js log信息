@@ -1,2 +1,14 @@
 https://www.cnblogs.com/fyangq/p/12624912.html
 https://www.jianshu.com/p/98f562597de2
+控制台抓取数据  不支持console.log 对象 只有字符串才能抓取到所以打印时要打印字符串
+
+[] 切片和 range一样右边界不包含
+
+在从响应的对象取数据时有时检测不到结果是字符串  可以显示转换下字符串然后就能调用字符串函数了
+而且要有一个好习惯  从响应结果中取出的结果取出两边的空格
+格式化只有字符串才能格式化所有
+要格式化就是把python对象转成字符串然后格式化
+当前的窗口一直在变化
+所以多个窗口时打印 变化前后的当前窗口
+print(json.dumps(res, sort_keys=True, indent=4, separators=(',', ': ')))
+str(info[2])[50:-1].strip()
