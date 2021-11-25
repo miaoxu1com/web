@@ -12,7 +12,7 @@ capabilities = DesiredCapabilities.CHROME
 capabilities['goog:loggingPrefs'] = {'browser': 'ALL'}
 wb = webdriver.Chrome(desired_capabilities=capabilities)
 wb.get("file:///D:/testBraintree-no-vault%202.html")
-
+# id动态变化一定要用完整的xpath路径，无论怎么变都可以定位到元素
 try:
     ui.WebDriverWait(wb, 80).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div/div/iframe[1]')))
 except TimeoutException:
@@ -51,5 +51,6 @@ else:
     # j = json.dumps(info, indent=4, ensure_ascii=False)
     # with codecs.open('info.json', "w", "utf-8") as f:
     #     f.write(j)
+    #eval 要把转义符替换掉就可以转字典了
     res = eval(str(info[2])[50:-1].strip().replace('\\', ""))
     print(json.dumps(res, sort_keys=True, indent=4, separators=(',', ': ')))
