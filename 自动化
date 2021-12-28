@@ -7,3 +7,5 @@ playwright  自动化流程   首先打开连接一定要是首页的  多级连
 frame  连接不行就现有select查找frame元素
 然后fm = frame.conten_frame()  切换到frame  切换后返回frame对象  然后操作frame  点击frame中的对象而不是页面的对象了
 https://www.cnblogs.com/lucas--liu/p/playwright-input-button-select.html
+
+
